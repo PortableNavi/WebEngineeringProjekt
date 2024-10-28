@@ -3,55 +3,92 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/sidebar.css">
+    <link rel="stylesheet" href="assets/home.css">
     <title>Paketzentrale</title>
   </head>
   <body>
-    <h1>Persönliche Angaben</h1>
-    <p>Bitte teile uns ein paar Details zu deiner Person mit, damit wir deine Pakete sicher zustellen können.</p>
 
-    <form>
-      <label for="name">Name</label><br>
-      <input type="text" id="name" name="name"><br>
-      <label for="vorname">Vorname</label><br>
-      <input type="text" id="vorname" name="vorname"><br>
-      <br>
-      
-      <label for="plz">Postleitzahl </label><br>
-      <input type="range" name="plz" id="plz" value="53179" min="01067" max="99998" oninput="document.getElementById('plz_anzeige').value=this.value">
-      <input type="text" id="plz_anzeige" value="53179" disabled><br>
-      <br>
-      
-      <label for="hausnr">Hausnummer:</label>
-      <select name="hausnr" id="hausnr">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6_10">6 bis 10</option>
-        <option value="10_20">10 bis 20</option>
-        <option value="u50">mehr als 50</option>
-      </select><br>
-      <br>
+    <nav class="sidebar">
+      <ul>
+        <li class="sidebar-title">
+          <a href="index.html">
+            <span>RL-Mail</span>
+          </a>
+        </li>
 
-      <fieldset>
-        <legend>Kann das Paket durch werfen zugestellt werden?</legend>
-        <input type="radio" name="stock" id="stock_ok" value="ok">
-        <label for="stock_ok">Ich wohne im Erdgeschoss</label><br>
-        <input type="radio" name="stock" id="stock_werfen" value="werfen" checked>
-        <label for="stock_werfen">Ich nicht höher als der zweite Stock</label><br>
-        <input type="radio" name="stock" id="stock_klingeln" value="klingeln">
-        <label for="stock_klingeln">Ich wohne über dem zweiten Stock</label><br>
-      </fieldset>
-      
-      <br>
-      <input type="checkbox" name="haftung" id="haftung">
-      <label for="haftung">Ich Übernehme keine Haftung für mein Paket</label><br>
+        <li>
+          <a href="index.html">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z"/></svg>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="input_form.html" class="active">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-160q-50 0-85-35t-35-85H80q-17 0-28.5-11.5T40-320v-400q0-33 23.5-56.5T120-800h480q33 0 56.5 23.5T680-720v80h80q19 0 36 8.5t28 23.5l88 117q4 5 6 11t2 13v147q0 17-11.5 28.5T880-280h-40q0 50-35 85t-85 35q-50 0-85-35t-35-85H360q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T280-280q0-17-11.5-28.5T240-320q-17 0-28.5 11.5T200-280q0 17 11.5 28.5T240-240ZM120-360h32q17-18 39-29t49-11q27 0 49 11t39 29h272v-360H120v360Zm600 120q17 0 28.5-11.5T760-280q0-17-11.5-28.5T720-320q-17 0-28.5 11.5T680-280q0 17 11.5 28.5T720-240Zm-40-200h170l-90-120h-80v120ZM360-540Z"/></svg>
+            <span>Paket-Zentrale</span>
+          </a>
+        </li>
+        <li>
+          <a href="partner.html">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M475-160q4 0 8-2t6-4l328-328q12-12 17.5-27t5.5-30q0-16-5.5-30.5T817-607L647-777q-11-12-25.5-17.5T591-800q-15 0-30 5.5T534-777l-11 11 74 75q15 14 22 32t7 38q0 42-28.5 70.5T527-522q-20 0-38.5-7T456-550l-75-74-175 175q-3 3-4.5 6.5T200-435q0 8 6 14.5t14 6.5q4 0 8-2t6-4l108-108q11-11 27.5-11.5T398-528q11 11 11 28t-11 28L291-364q-3 3-4.5 6.5T285-350q0 8 6 14t14 6q4 0 8-2t6-4l108-107q11-11 27.5-11.5T483-443q11 11 11 28t-11 28L376-279q-3 2-4.5 6t-1.5 8q0 8 6 14t14 6q4 0 7.5-1.5t6.5-4.5l108-107q11-11 27.5-11.5T568-358q11 11 11 28t-11 28L460-194q-3 3-4.5 6.5T454-180q0 8 6.5 14t14.5 6Zm-1 80q-37 0-65.5-24.5T375-166q-34-5-57-28t-28-57q-34-5-56.5-28.5T206-336q-38-5-62-33t-24-66q0-20 7.5-38.5T149-506l175-175q23-23 56.5-23t56.5 23l75 75q2 3 6 4.5t8 1.5q9 0 15-5.5t6-14.5q0-4-1.5-8t-4.5-6L398-777q-11-12-25.5-17.5T342-800q-15 0-30 5.5T285-777L144-635q-14 14-20 33t-3 38q3 17-7 30t-27 15q-17 2-30-7.5T42-553q-6-38 5.5-74.5T87-692l141-141q24-23 53.5-35t60.5-12q31 0 60.5 12t52.5 35l11 11 11-11q24-23 53.5-35t60.5-12q31 0 60.5 12t52.5 35l169 169q23 23 35 53t12 61q0 31-12 60.5T873-437L545-110q-14 14-32.5 22T474-80Zm-98-560Z"/></svg>
+            <span>Unsere Partner</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-      <br>
-      <input type="submit" value="OK">
-    </form>
-     <br>
-     <a href="index.html">Zurück</a>
+    <main role="main">
+      <div class="box">
+        <h1>Persönliche Angaben</h1>
+        <p>Bitte teile uns ein paar Details zu deiner Person mit, damit wir deine Pakete sicher zustellen können.</p>
+      </div>
+
+      <form class="box">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="vorname">Vorname</label><br>
+        <input type="text" id="vorname" name="vorname"><br>
+        <br>
+        
+        <label for="plz">Postleitzahl </label><br>
+        <input type="range" name="plz" id="plz" value="53179" min="01067" max="99998" oninput="document.getElementById('plz_anzeige').value=this.value">
+        <input type="text" id="plz_anzeige" value="53179" disabled><br>
+        <br>
+        
+        <label for="hausnr">Hausnummer:</label>
+        <select name="hausnr" id="hausnr">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6_10">6 bis 10</option>
+          <option value="10_20">10 bis 20</option>
+          <option value="u50">mehr als 50</option>
+        </select><br>
+        <br>
+
+        <fieldset>
+          <legend>Kann das Paket durch werfen zugestellt werden?</legend>
+          <input type="radio" name="stock" id="stock_ok" value="ok">
+          <label for="stock_ok">Ich wohne im Erdgeschoss</label><br>
+          <input type="radio" name="stock" id="stock_werfen" value="werfen" checked>
+          <label for="stock_werfen">Ich nicht höher als der zweite Stock</label><br>
+          <input type="radio" name="stock" id="stock_klingeln" value="klingeln">
+          <label for="stock_klingeln">Ich wohne über dem zweiten Stock</label><br>
+        </fieldset>
+        
+        <br>
+        <input type="checkbox" name="haftung" id="haftung">
+        <label for="haftung">Ich Übernehme keine Haftung für mein Paket</label><br>
+
+        <br>
+        <input type="submit" value="OK">
+      </form>
+       <br>
+       <a href="index.html">Zurück</a>
+    </main>
   </body>
 </html>

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/paket_zentrale.css">
     <title>RL-Mail</title>
   </head>
   <body>
@@ -36,7 +37,64 @@
     </nav>
 
     <main role="main">
-      <p>Main</p>
+      <h1>Persönliche Angaben</h1>
+      <p>Bitte teile uns ein paar Details zu deiner Person mit, damit wir deine Pakete sicher zustellen können.</p>
+      
+      <form>
+        <div class="nameFields">   
+          <div class="inputContainer">  
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+          </div>
+          
+          <div class="inputContainer"> 
+            <label for="vorname">Vorname</label>
+            <input type="text" id="vorname" name="vorname">
+          </div>
+        </div>
+
+        <div class="addressFields">
+          <div class="inputContainer">
+            <label for="plz" id="plz_anzeige">Postleitzahl: 53179</label>
+            <div class="inputRange">
+              <input type="range" name="plz" id="plz" value="53179" min="01067" max="99998" oninput="document.getElementById('plz_anzeige').innerText=`Postleitzahl: ` + this.value">
+            </div>
+          </div>
+
+          <div class="inputContainer">
+            <label for="hausnr">Hausnummer:</label>
+            <select name="hausnr" id="hausnr">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6_10">6 bis 10</option>
+              <option value="10_20">10 bis 20</option>
+              <option value="u50">mehr als 50</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="inputContainer">
+          <fieldset>
+            <legend>Kann das Paket durch werfen zugestellt werden?</legend>
+            <input type="radio" name="stock" id="stock_ok" value="ok">
+            <label for="stock_ok">Ich wohne im Erdgeschoss</label><br>
+            <input type="radio" name="stock" id="stock_werfen" value="werfen" checked>
+            <label for="stock_werfen">Ich nicht höher als der zweite Stock</label><br>
+            <input type="radio" name="stock" id="stock_klingeln" value="klingeln">
+            <label for="stock_klingeln">Ich wohne über dem zweiten Stock</label><br>
+          </fieldset>
+        </div>
+
+        <div class="confirmSection">
+          <input type="checkbox" name="haftung" id="haftung">
+          <label for="haftung">Ich Übernehme keine Haftung für mein Paket</label>
+        </div>
+        <input type="submit" value="OK">
+      </form>
+
     </main>
 
     <footer>

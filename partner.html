@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/partner.css">
+    <script async src="src/partner.js">
+
+    </script>
     <title>RL-Mail</title>
   </head>
   <body>
@@ -36,11 +40,29 @@
     </nav>
 
     <main role="main">
-      <p>Main</p>
+      <ul class="partnerList">
+        <h1>Loading...</h1>  
+      </ul>
     </main>
 
     <footer>
       <p>Footer</p>
     </footer>
   </body>
+
+  <template id="partnerTemplate">
+    <style type="text/css" media="all">
+      .card { 
+        padding: 1em;
+        border: solid 1px black;
+        border-radius: 8px;
+        .partnerOrga {margin-bottom: 1em;}
+      }
+    </style>
+    <div class="card">
+      <h2 class="partnerName"></h2>
+      <p class="partnerOrga"></p>
+      <p class="partnerDesc"></p>
+    </div>
+  </template>
 </html>

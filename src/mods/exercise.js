@@ -1,4 +1,7 @@
-export {Exercise, fetch_exercises};
+export {Exercise, fetch_exercises, parse_exercise, get_exercise};
+
+
+const EXERCISE_REG = new Map();
 
 
 class Exercise
@@ -26,7 +29,7 @@ class Exercise
   get task_text() {return this.$task_text;}
   get solution_type() {return this.$solution_type;}
 
-  mini_template()
+  mini_template(solutions)
   {
     const template = document.querySelector("#miniExTemplate");
     const t = template.content.cloneNode(true);
@@ -34,11 +37,22 @@ class Exercise
     t.querySelector(".miniExId").textContent = this.id;
     t.querySelector(".miniExTitle").textContent = this.title;
     t.querySelector(".miniExDesc").textContent = this.desc;
+
+    if (solutions) solutions.forEach(sol => {
+        const sol_template = document.querySelector("#solTemplate");
+        const solt = sol_template.content.cloneNode(true);
+        solt.querySelector(".solDate").textContent = sol.date;
+        solt.querySelector(".solAttempt").textContent = sol.attempt;
+        t.querySelector(".miniExSolutions").appendChild(solt);
+    });
+
     return t;
   }
 }
 
 
+// Fetches all exercises from a file listing all exercise sources.
+// This function ensures, that each exercise fetches has a unique id.
 async function fetch_exercises(file) 
 {
   let data;
@@ -55,15 +69,19 @@ async function fetch_exercises(file)
 
   data = data["sources"]
     .map(d => {
-      try {
-        return parse_exercise(d)
-      }
+      return parse_exercise(d)
+        .then(ex => {
+          if (EXERCISE_REG.get(ex.id)) 
+          throw new Error(`Exercise Id ${ex.id} already exists`);
 
-      catch (e) {
-        console.log("Error while fetching exercise sources: "+e);
-        return null;
+          EXERCISE_REG.set(ex.id, ex);
+          return ex;
+        })
+        .catch(e => {
+          console.log("Error while fetching exercise sources: "+e);
+        });
       }
-    })
+    );
 
   return Promise.all(data);
 }
@@ -71,10 +89,8 @@ async function fetch_exercises(file)
 
 async function parse_exercise(file)
 {
-  let data;
-
   try {
-    data = await fetch(file);
+    let data = await fetch(file);
     data = await data.json();
     return new Exercise(
       data["id"],
@@ -92,3 +108,8 @@ async function parse_exercise(file)
   }
 }
 
+
+function get_exercise(id)
+{
+  return EXERCISE_REG.get(id);
+}

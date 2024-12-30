@@ -2,7 +2,7 @@ import { fetch_exercises } from "./mods/exercise.js";
 
 
 // Start loading exercise data right as this module loads...
-const exercise_data = fetch_exercises("assets/exercises.json");
+const exercise_data = fetch_exercises("data/exercises.json");
 
 
 // Set the exercise list items to the exercise data once the dom has loaded...

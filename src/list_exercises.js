@@ -17,12 +17,9 @@ async function build_mini_ex_list()
 {
   const list = document.querySelector(".miniExList");
 
-  // Wait for solutions to be loaded
-  await solution_data;
+  // Wait for solutions and exercises to be loaded before listing them...  
+  let [exercises] = await Promise.all([exercise_data, solution_data]);
 
-  // Wait for exercise data to be loaded
-  let exercises = await exercise_data;
-  
   exercises = exercises.filter(ex => ex);
   if (exercises.length > 0) list.innerHTML = "";
 

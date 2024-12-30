@@ -6,26 +6,30 @@ const SOLUTION_REG = new Map();
 
 class Solution
 {
-  constructor(type, exercise, attempt, date, source)
+  constructor(type, exercise, attempt, date, source, details_source)
   {
     if (!type) throw new Error("Solution type was blank");
     if (!exercise) throw new Error("Solution exercise was blank");
     if (!attempt) throw new Error("Solution attempt was blank");
     if (!date) throw new Error("Solution date was blank");
     if (!source) throw new Error("Solution source was blank");
+    if (!details_source) throw new Error("Solution details source was blank");
 
     this.$type = type;
     this.$exercise = exercise;
     this.$attempt = attempt;
     this.$date = date;
     this.$source = source;
+    this.$details_source = details_source;
   }
 
   get type() {return this.$type;}
   get exercise() {return this.$exercise;}
   get attempt() {return this.$attempt;}
   get date() {return this.$date;}
-  get source() {return this.$source;}
+  get data() {return this.$data;}
+  get source() {return thissource;}
+  get details_source() {return this.$details_source;}
 
   async load_source()
   {
@@ -35,10 +39,8 @@ class Solution
     {
       data = await fetch(this.$source);
 
-      if (this.$type == "json")
-      {
-        data = data.json(); 
-      }
+      if (this.$type == "json") data = await data.json(); 
+      else data = await data.text();
     }
 
     catch (e)
@@ -100,6 +102,7 @@ async function parse_solution(file)
       data["attempt"],
       data["date"],
       data["source"],
+      file,
     );
 
     await sol.load_source();

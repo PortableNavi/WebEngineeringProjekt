@@ -1,0 +1,80 @@
+@import url("colors.css");
+
+
+.listCard
+{
+  background: var(--col-background-card);
+  border-radius: 10px;
+  box-shadow: 1.5px 3.0px 3.0px hsl(0deg 0% 0% / 0.15);
+  padding: 30px;
+
+  a
+  {
+    text-decoration: none;
+  }
+
+  h2
+  {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.3em;
+  }
+
+  .miniExTitle
+  {
+    color: var(--col-text);
+  }
+
+  .miniExDesc
+  {
+    color: var(--col-text-dim);
+    margin-bottom: 0.3em;
+  }
+
+  .miniExId
+  {
+    background: var(--col-selected);
+    font-size: 0.7em;
+    color: var(--col-text);
+    padding: 3px 10px;
+    border-radius: 50px;
+  }
+}
+
+
+.miniExList
+{
+  list-style: none;
+}
+
+.miniExSolutions
+{
+  list-style: inside;
+
+  li
+  {
+    margin-bottom: 5px;
+    
+    :hover
+    {
+      color: var(--col-text-dim);
+    }
+
+  }
+  
+  a 
+  {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    color: var(--col-link);
+  }
+}
+
+ul.miniExList > li
+{
+  margin-bottom: 10px;
+}
+

@@ -1,0 +1,15 @@
+:root
+{
+  --col-background-dark: #0E0D0E;
+  --col-background-light: #E6E0E3;
+  --col-background-highlight: #2A272B;
+  --col-background: #131213;
+  --col-background-card: #1B1A1C;
+  --col-text: #E6E0E3;
+  --col-text-dim: #BBB;
+  --col-selected: #44445A;
+  --col-selected-alt: #6f5555;
+  --col-border: #4D4256;
+  --col-border-dark: #312a37;
+  --col-link: #9f86ff;
+}

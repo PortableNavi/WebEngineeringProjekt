@@ -66,7 +66,7 @@
   a 
   {
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: none;
     text-underline-offset: 3px;
     text-decoration-thickness: 1px;
     color: var(--col-link);

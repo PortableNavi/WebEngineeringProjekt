@@ -6,21 +6,22 @@ const EXERCISE_REG = new Map();
 
 class Exercise
 {
-  constructor(id, title, desc, task_text, solution_type, source)
+  constructor(id, title, desc, task_source, solution_type, source)
   {
     if (!id) throw new Error("Exercise Id was blank");
     if (!title) throw new Error("Exercise Title was blank");
     if (!desc) throw new Error("Exercise Description was blank");
-    if (!task_text) throw new Error("Exercise TaskText was blank");
+    if (!task_source) throw new Error("Exercise TaskSource was blank");
     if (!solution_type) throw new Error("Exercise SolutionType was blank");
     if (!source) throw new Error("Exercise Source was blank");
 
     this.$id = id;
     this.$title = title;
     this.$desc = desc;
-    this.$task_text = task_text;
+    this.$task_source = task_source;
     this.$solution_type = solution_type;
     this.$source = source;
+    this.$task_text = "";
   }
 
   get id() {return this.$id;}
@@ -28,6 +29,27 @@ class Exercise
   get desc() {return this.$desc;}
   get task_text() {return this.$task_text;}
   get solution_type() {return this.$solution_type;}
+
+  async load_source()
+  {
+    let data;
+
+    try
+    {
+      data = await fetch(this.$task_source);
+
+      if (this.$type == "json") data = await data.json(); 
+      else data = await data.text();
+    }
+
+    catch (e)
+    {
+      console.error("Error while loading solution source: "+e);
+      return;
+    }
+
+    this.$task_text = data;
+  }
 
   mini_template(solutions)
   {
@@ -99,14 +121,17 @@ async function parse_exercise(file)
   try {
     let data = await fetch(file);
     data = await data.json();
-    return new Exercise(
+    const ex = new Exercise(
       data["id"],
       data["title"],
       data["description"],
-      data["task_text"],
+      data["task_source"],
       data["solution_type"],
       file,
-    )
+    );
+
+    await ex.load_source();
+    return ex;
   }
 
   catch (e) {

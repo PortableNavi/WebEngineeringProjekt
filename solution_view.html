@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/solution_view.css">
     <script type="module" src="src/solution_view.js">
 
     </script>
@@ -39,9 +40,10 @@
     </nav>
 
     <main role="main">
-      <h2>Lösungsversuch <span class="solAttempt"></span> am <span class="solDate"></span></h2>
+      <h1>Lösungsversuch <span class="solAttempt"></span></h1>
+      <p class="date">am <span class="solDate"></span></p>
       
-      <div class="solContent">
+      <div class="solContent card">
       </div>
     </main>
 
@@ -51,7 +53,7 @@
   </body>
   
   <template id="codeSolution">
-      <code class="solutionContent"></code>
+      <pre><code class="solutionContent"></code></pre>
   </template>
 
 </html>

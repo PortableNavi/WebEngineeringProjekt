@@ -1,0 +1,32 @@
+@import url("colors.css");
+
+
+.titleCard
+{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2em;
+}
+
+.exId
+{
+  padding: 3px 10px;
+}
+
+
+.exTask
+{
+  code
+  {
+    background: var(--col-selected);
+    padding: 0px 5px;
+    border-radius: 3px;
+  }
+
+  a
+  {
+    color: var(--col-link);
+    font-style: italic;
+    text-decoration: none;
+  }
+}

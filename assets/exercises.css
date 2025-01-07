@@ -1,18 +1,19 @@
 @import url("colors.css");
 
 
+a
+{
+  text-decoration: none;
+}
+
+
+h1
+{
+  margin-bottom: 1em;
+}
+
 .listCard
 {
-  background: var(--col-background-card);
-  border-radius: 10px;
-  box-shadow: 1.5px 3.0px 3.0px hsl(0deg 0% 0% / 0.15);
-  padding: 30px;
-
-  a
-  {
-    text-decoration: none;
-  }
-
   h2
   {
     display: flex;
@@ -34,11 +35,7 @@
 
   .miniExId
   {
-    background: var(--col-selected);
     font-size: 0.7em;
-    color: var(--col-text);
-    padding: 3px 10px;
-    border-radius: 50px;
   }
 }
 

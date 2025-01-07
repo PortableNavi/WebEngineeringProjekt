@@ -1,0 +1,14 @@
+@import url("colors.css");
+
+
+.solContent
+{
+  margin-top: 2em;
+  overflow: scroll;
+}
+
+.date
+{
+  color: var(--col-text-dim);
+  font-style: italic;
+}

@@ -4,11 +4,54 @@
 .solContent
 {
   margin-top: 2em;
-  overflow-y: scroll;
 }
+
 
 .date
 {
   color: var(--col-text-dim);
   font-style: italic;
+}
+
+
+.codeList
+{
+  display: flex;
+  flex-direction: column;
+
+  li
+  {
+    padding-left: 10px;
+  }
+}
+
+.scroller
+{
+  background: var(--col-background-highlight);
+  margin-left: 15px;
+  border-radius: 5px;
+}
+
+.solHeader
+{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+
+@media screen and (max-width: 460px)
+{
+  .scroller
+  {
+    overflow-y: scroll;
+    margin: 0;
+  }
+
+  .codeList
+  {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 }

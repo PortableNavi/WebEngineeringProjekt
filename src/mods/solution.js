@@ -28,7 +28,7 @@ class Solution
   get attempt() {return this.$attempt;}
   get date() {return this.$date;}
   get data() {return this.$data;}
-  get source() {return thissource;}
+  get source() {return this.$source;}
   get details_source() {return this.$details_source;}
 
   async load_source()

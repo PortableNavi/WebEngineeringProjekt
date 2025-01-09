@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 @import url("colors.css");
 
 
@@ -34,19 +35,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px;
   box-shadow: 1.5px 3.0px 3.0px hsl(0deg 0% 0% / 0.1);
   border: none;
   border-radius: 5px;
-  background: var(--col-selected);
+  background: var(--col-selected-alt);
+  color: var(--col-text);
+  font-weight: bold;
+  font-size: 0.9em;
   cursor: pointer;
+  padding: 9px 18px;
 }
 
 .btn:hover
 {
-  background: var(--col-background-highlight);
+  background: var(--col-selected);
 }
-
 
 
 body
@@ -91,11 +94,23 @@ nav
     padding: 0.5em;
     border-radius: 10px;
     background: var(--col-background-card);
+    
+    .btn
+    {
+      padding: 8px;
+      background: var(--col-selected)
+    }
+
   }
 
   .themeToggle:hover
   {
     cursor: pointer;
+
+    .btn
+    {
+      background: var(--col-background-highlight)
+    }
   }
 
   a 
@@ -183,7 +198,7 @@ main
 }
 
 
-@media screen and (max-width: 800px)
+@media screen and (max-width: 940px)
 {
   nav span 
   {
@@ -277,4 +292,9 @@ main
     top: 31px;
     right: 31px;
   }
+}
+
+code
+{
+  font-family: "Fira Code";
 }

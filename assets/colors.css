@@ -1,3 +1,8 @@
+/*
+ * Diese Farben wurden der Google Material Design 3
+ * Website entnommen: https://m3.material.io/ 
+ * */
+
 :root
 {
   --col-background-dark: #0E0D0E;
@@ -8,8 +13,25 @@
   --col-text: #E6E0E3;
   --col-text-dim: #BBB;
   --col-selected: #44445A;
-  --col-selected-alt: #6f5555;
+  --col-selected-alt: #7687C8;
   --col-border: #4D4256;
   --col-border-dark: #312a37;
   --col-link: #9f86ff;
+}
+
+
+.light_theme
+{
+  --col-background-dark: #DFE1DE;
+  --col-background-light: #FDFBFF;
+  --col-background-highlight: #C4CEE1;
+  --col-background: #FDFBFF;
+  --col-background-card: #EEEEF0;
+  --col-text: #1B1A1C;
+  --col-text-dim: #1B1A1C;
+  --col-selected: #C4CEE1;
+  --col-selected-alt: #B0C0FD;
+  --col-border: #1c1b1d;
+  --col-border-dark: #312a37;
+  --col-link: #6442d6;
 }

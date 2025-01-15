@@ -15,7 +15,7 @@
   --col-selected: #44445A;
   --col-selected-alt: #7687C8;
   --col-border: #4D4256;
-  --col-border-dark: #312a37;
+  --col-border-dark: #242324;
   --col-link: #9f86ff;
 }
 
@@ -32,6 +32,6 @@
   --col-selected: #C4CEE1;
   --col-selected-alt: #B0C0FD;
   --col-border: #1c1b1d;
-  --col-border-dark: #312a37;
+  --col-border-dark: #e1e1e1;
   --col-link: #6442d6;
 }

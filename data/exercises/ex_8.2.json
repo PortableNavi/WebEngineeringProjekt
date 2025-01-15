@@ -1,0 +1,9 @@
+{
+  "title": "async/await",
+  "id": "8.2",
+  "description": "Aynchrones Javascript durch Nutzung von async/await",
+  "task_source": "data/exercises/data/ex_8.2.html",
+  "solution_type": "code",
+  "thema": "Asynchrones JavaScript",
+  "folien": "9-1"
+}

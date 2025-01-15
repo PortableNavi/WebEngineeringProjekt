@@ -1,34 +1,148 @@
-.procontra
-{
-  margin-top: 2em;
-  display: table;
-  
-  > li > span
-  {
-    font-size: 1.5em;
-    font-weight: bold;
-  }
+@import url("colors.css");
 
-  > li
-  {
-    display: table-cell;
-    
-    li
-    {
-      padding: 0.5em;
-      padding-left: 0px;
-      margin-left: 1em;
-    }
-  }
+
+.tr_nr
+{
+  font-size: 0.8em;
 }
 
 
-@media screen and (max-width: 650px)
+a
 {
-  .procontra
+  color: var(--col-link);
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: var(--col-text-dim);
+}
+
+.linkOff
+{
+  color: var(--col-text-dim);
+}
+
+.exTable
+{
+
+  border-collapse: collapse;
+  border-radius: 7px;
+  overflow: hidden;
+
+  th
   {
+    background: var(--col-selected-alt);
+    text-align: left;
+    font-weight: bold;
+  }
+
+  td, th
+  {
+    padding: 12px;
+  }
+  
+  tr
+  {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  tr:nth-of-type(even)
+  {
+    background: hsl(0 0% 100% / 0.02);
+  }
+
+  .exTableBody
+  { 
+    tr
+    {
+      border-bottom: 1px solid var(--col-border-dark);
+      border-radius: 7px;
+    }
+  }
+
+  tbody tr:hover
+  {
+    background: var(--col-background-highlight)
+  }
+}
+
+.light_theme tr:nth-of-type(even)
+{
+  background: hsl(0 0% 0% / 0.05);
+}
+
+
+.exTableBody
+{
+  border-bottom: 4px solid var(--col-selected-alt);
+}
+
+
+@media (max-width: 710px)
+{
+  table
+  {
+    width: 100%;
+  }
+
+  th {display: none};
+
+  .exTableBody 
+  {
+    border-bottom: 1px solid transparent;
+  }
+
+  .exTable.shadow
+  {
+    box-shadow: 0px 0px 0px hsl(0deg 0% 0% / 0.1);
+  }
+
+  .exTableBody tr
+  {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    padding-top: 0px; 
+    width: 100%;
+    background: var(--col-background-card);
+    border: 1px solid var(--col-border-dark);
+    margin-bottom: 10px;
+  }
+
+  .exTable tr:nth-of-type(even)
+  {
+    background: var(--col-background-card);
+  }
+
+  .exTable td
+  {
+    display: flex;
+    padding: 2px 10px;
+    gap: 10px;
+  }
+
+  td:nth-of-type(1)
+  {
+    background: var(--col-selected-alt);
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    
+    .tag {font-size: 1em}
+  }
+
+  td::before
+  {
+    content: attr(tname) ": ";
+    font-weight: bold;
+  }
+
+  td:nth-of-type(1)::before
+  {
+    content: "Aufgabe";
   }
 }

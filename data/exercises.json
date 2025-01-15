@@ -1,6 +1,7 @@
 {
   "sources": [
+    "data/exercises/ex_8.1.json",
     "data/exercises/ex_1.1.json",
-    "data/exercises/ex_8.1.json"
+    "data/exercises/ex_8.2.json"
   ]
 }

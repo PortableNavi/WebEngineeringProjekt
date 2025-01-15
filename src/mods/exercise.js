@@ -6,7 +6,7 @@ const EXERCISE_REG = new Map();
 
 class Exercise
 {
-  constructor(id, title, desc, task_source, solution_type, source)
+  constructor(id, title, desc, task_source, solution_type, thema, folien, source)
   {
     if (!id) throw new Error("Exercise Id was blank");
     if (!title) throw new Error("Exercise Title was blank");
@@ -14,6 +14,8 @@ class Exercise
     if (!task_source) throw new Error("Exercise TaskSource was blank");
     if (!solution_type) throw new Error("Exercise SolutionType was blank");
     if (!source) throw new Error("Exercise Source was blank");
+    if (!thema) throw new Error("Thema was blank");
+    if (!folien) throw new Error("Folien was blank");
 
     this.$id = id;
     this.$title = title;
@@ -22,6 +24,8 @@ class Exercise
     this.$solution_type = solution_type;
     this.$source = source;
     this.$task_text = "";
+    this.$thema = thema;
+    this.$folien = folien;
   }
 
   get id() {return this.$id;}
@@ -29,6 +33,9 @@ class Exercise
   get desc() {return this.$desc;}
   get task_text() {return this.$task_text;}
   get solution_type() {return this.$solution_type;}
+  get thema() {return this.$thema;}
+  get folien() {return this.$folien}
+  get source() {return this.$source}
 
   async load_source()
   {
@@ -127,6 +134,8 @@ async function parse_exercise(file)
       data["description"],
       data["task_source"],
       data["solution_type"],
+      data["thema"],
+      data["folien"],
       file,
     );
 

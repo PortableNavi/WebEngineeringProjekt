@@ -3,5 +3,7 @@
   "id": "8.1",
   "description": "Aynchrones Javascript durch Nutzung von Promises",
   "task_source": "data/exercises/data/ex_8.1.html",
-  "solution_type": "code"
+  "solution_type": "code",
+  "thema": "Asynchrones JavaScript",
+  "folien": "9-1"
 }

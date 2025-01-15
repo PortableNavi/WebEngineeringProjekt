@@ -1,4 +1,4 @@
-export {Solution, fetch_solutions, parse_solution, get_solutions_for_exercise};
+export {Solution, fetch_solutions, parse_solution, get_solutions_for_exercise, get_last_attempt_for_exercise};
 
 
 const SOLUTION_REG = new Map();
@@ -119,5 +119,15 @@ async function parse_solution(file)
 function get_solutions_for_exercise(id)
 {
   return SOLUTION_REG.get(id);
+}
+
+
+function get_last_attempt_for_exercise(id)
+{
+  let  e = SOLUTION_REG.get(id);
+  if (e == null) return null;
+
+  e = e.sort((a, b) => b.attempt - a.attempt);
+  return (e.length > 0) ? e[0] : null;
 }
 

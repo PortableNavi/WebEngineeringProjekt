@@ -23,7 +23,7 @@ async function build_mini_ex_list()
   exercises = exercises.filter(ex => ex);
   if (exercises.length > 0) list.innerHTML = "";
 
-  exercises
+  exercises.sort((a, b) => a.id - b.id)
     .forEach(ex => {
       const li = document.createElement("li");
       li.appendChild(ex.mini_template(get_solutions_for_exercise(ex.id)));

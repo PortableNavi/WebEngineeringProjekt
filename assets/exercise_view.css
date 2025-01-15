@@ -29,4 +29,9 @@
     font-style: italic;
     text-decoration: none;
   }
+
+  p
+  {
+    text-align: justify;
+  }
 }

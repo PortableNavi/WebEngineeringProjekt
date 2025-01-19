@@ -1,0 +1,9 @@
+{
+  "title": "Test Aufgaben",
+  "id": "0.2",
+  "description": "Diese Aufgabe zeigt ein Beispiel für eine text solution.",
+  "task_source": "data/exercises/data/ex_0.x.html",
+  "solution_type": "text",
+  "thema": "Test",
+  "folien": "-"
+}

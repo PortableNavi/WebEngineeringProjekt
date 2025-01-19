@@ -1,0 +1,9 @@
+{
+  "title": "Test Aufgaben",
+  "id": "0.1",
+  "description": "Diese Aufgabe zeigt ein Beispiel für eine code solution und mehrere Solutions.",
+  "task_source": "data/exercises/data/ex_0.x.html",
+  "solution_type": "code",
+  "thema": "Test",
+  "folien": "-"
+}

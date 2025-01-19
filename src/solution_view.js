@@ -31,7 +31,8 @@ async function solution()
   document.querySelector(".solDate").textContent = solution.date;
   document.querySelector(".solAttempt").textContent = solution.attempt;
 
-  if (solution.type == "code") display_code_solution(solution)
+  if (solution.type == "code") display_code_solution(solution);
+  if (solution.type == "text") display_text_solution(solution);
 
 }
 
@@ -54,6 +55,14 @@ function display_code_solution(solution)
     document.querySelector(".solContent").appendChild(t);
 }
 
+
+function display_text_solution(solution)
+{
+  const text_template = document.querySelector("#textSolution");
+  const t = text_template.content.cloneNode(true);
+  t.querySelector(".textContent").textContent = solution.data;
+  document.querySelector(".solContent").appendChild(t);
+}
 
 function view_raw()
 {

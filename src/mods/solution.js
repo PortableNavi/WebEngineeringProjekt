@@ -38,8 +38,13 @@ class Solution
     try
     {
       data = await fetch(this.$source);
-
-      if (this.$type == "json") data = await data.json(); 
+      
+      if (!data.ok) 
+        throw new Error(`Failed to fetch from {this.$source}`);
+      
+      if (this.$type == "json") 
+        data = await data.json(); 
+      
       else data = await data.text();
     }
 
@@ -48,7 +53,6 @@ class Solution
       console.error("Error while loading solution source: "+e);
       return;
     }
-
     this.$data = data;
   }
 }

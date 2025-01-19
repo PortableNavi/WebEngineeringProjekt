@@ -19,6 +19,13 @@
 }
 
 
+.textContent
+{
+  text-align: justify;
+  color: var(--col-text-dim);
+}
+
+
 .codeList
 {
   display: flex;

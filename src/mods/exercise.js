@@ -45,7 +45,12 @@ class Exercise
     {
       data = await fetch(this.$task_source);
 
-      if (this.$type == "json") data = await data.json(); 
+      if (!data.ok) 
+        throw new Error(`Failed to fetch from {this.$task_source}`);
+
+      if (this.$type == "json") 
+        data = await data.json(); 
+      
       else data = await data.text();
     }
 

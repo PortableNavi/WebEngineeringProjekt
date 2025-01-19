@@ -1,7 +1,8 @@
 {
   "sources": [
-    "data/solutions/sol_1.1_1.json",
-    "data/solutions/sol_2.1_1.json",
-    "data/solutions/sol_1.8_1.json"
+    "data/solutions/sol_0.1_1.json",
+    "data/solutions/sol_0.1_2.json",
+    "data/solutions/sol_0.2_1.json",
+    "data/solutions/sol_8.1_1.json"
   ]
 }

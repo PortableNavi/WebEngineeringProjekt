@@ -57,33 +57,6 @@ class Exercise
 
     this.$task_text = data;
   }
-
-  mini_template(solutions)
-  {
-    const template = document.querySelector("#miniExTemplate");
-    const t = template.content.cloneNode(true);
-
-    t.querySelector(".miniExId").textContent = this.id;
-    t.querySelector(".miniExTitle").textContent = this.title;
-    t.querySelector(".miniExDesc").textContent = this.desc;
-    
-    t.querySelector(".miniExSource")
-      .setAttribute("href", `exercise_view.html?source=${this.$source}`);
-
-    if (solutions) solutions.forEach(sol => {
-        const sol_template = document.querySelector("#solTemplate");
-        const solt = sol_template.content.cloneNode(true);
-        solt.querySelector(".solDate").textContent = sol.date;
-        solt.querySelector(".solAttempt").textContent = sol.attempt;
-        
-      solt.querySelector(".solDetailSource")
-        .setAttribute("href", `solution_view.html?source=${sol.details_source}`);
-      
-      t.querySelector(".miniExSolutions").appendChild(solt);
-    });
-
-    return t;
-  }
 }
 
 

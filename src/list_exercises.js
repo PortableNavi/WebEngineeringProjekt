@@ -26,8 +26,37 @@ async function build_mini_ex_list()
   exercises.sort((a, b) => a.id - b.id)
     .forEach(ex => {
       const li = document.createElement("li");
-      li.appendChild(ex.mini_template(get_solutions_for_exercise(ex.id)));
+      li.appendChild(mini_template(ex, get_solutions_for_exercise(ex.id)));
       list.appendChild(li);
   });
+}
+
+
+function mini_template(ex, solutions)
+{
+  const template = document.querySelector("#miniExTemplate");
+  const t = template.content.cloneNode(true);
+
+  t.querySelector(".miniExId").textContent = ex.id;
+  t.querySelector(".miniExTitle").textContent = ex.title;
+  t.querySelector(".miniExDesc").textContent = ex.desc;
+  
+  t.querySelector(".miniExSource")
+    .setAttribute("href", `exercise_view.html?source=${ex.source}`);
+
+  if (solutions) solutions.sort((a, b) => a.attempt - b.attempt)
+    .forEach(sol => {
+      const sol_template = document.querySelector("#solTemplate");
+      const solt = sol_template.content.cloneNode(true);
+      solt.querySelector(".solDate").textContent = sol.date;
+      solt.querySelector(".solAttempt").textContent = sol.attempt;
+      
+    solt.querySelector(".solDetailSource")
+      .setAttribute("href", `solution_view.html?source=${sol.details_source}`);
+    
+    t.querySelector(".miniExSolutions").appendChild(solt);
+  });
+
+  return t;
 }
 

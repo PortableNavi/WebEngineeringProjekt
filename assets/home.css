@@ -3,19 +3,20 @@
 
 .tr_nr
 {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
-
-a
+.tr_art
 {
-  color: var(--col-link);
-  text-decoration: none;
+  text-transform: capitalize;
+  background: var(--col-selected);
+  padding: 2px 5px;
+  border-radius: 5px;
 }
 
-a:hover
+.tr_abgabe
 {
-  color: var(--col-text-dim);
+  font-style: italic;
 }
 
 .linkOff

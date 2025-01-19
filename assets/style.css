@@ -9,6 +9,17 @@
 }
 
 
+a
+{
+  color: var(--col-link);
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: var(--col-text-dim);
+}
+
 .contentArea > h1
 {
   margin-bottom: 0.7em;
@@ -209,6 +220,22 @@ footer
   min-height: 50px;
   grid-column: 2/3;
   grid-row: 3;
+  padding: 1em 2em;
+  color: var(--col-text-dim);
+
+  .footerLink
+  {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9em;
+
+    svg
+    {
+      fill: var(--col-text-dim);
+      width: 1.2em;
+    }
+  }
 }
 
 

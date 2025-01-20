@@ -79,6 +79,7 @@ a:hover
   padding: 9px 18px;
 }
 
+
 .btn:hover
 {
   background: var(--col-selected);
@@ -241,8 +242,8 @@ footer
 
 .contentArea
 {
-  width: min(800px, 100%);
-  overflow-y: auto;
+  width: min(850px, 100%);
+  overflow: clip;
 }
 
 
@@ -255,6 +256,7 @@ main
   display: flex;
   justify-content: center;
   border-left: 1px solid var(--col-border-dark);
+  overflow: hidden;
 }
 
 
@@ -292,7 +294,7 @@ main
 }
 
 
-@media screen and (max-width: 460px)
+@media screen and (max-width: 540px)
 {
   nav
   {

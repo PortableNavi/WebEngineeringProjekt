@@ -1,0 +1,9 @@
+{
+  "title": "Zuordnung Homepage",
+  "id": "2.1",
+  "description": "Zuordnung der Homepage zu einem git repository",
+  "task_source": "data/exercises/data/ex_2.1.html",
+  "solution_type": "text",
+  "thema": "CCS-1",
+  "folien": "3-1"
+}

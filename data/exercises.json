@@ -2,6 +2,16 @@
   "sources": [
     "data/exercises/ex_0.1.json",
     "data/exercises/ex_0.2.json",
+    "data/exercises/ex_1.1.json",
+    "data/exercises/ex_1.2.json",
+    "data/exercises/ex_1.6.json",
+    "data/exercises/ex_1.7.json",
+    "data/exercises/ex_2.1.json",
+    "data/exercises/ex_2.2.1.json",
+    "data/exercises/ex_2.2.2.json",
+    "data/exercises/ex_2.3.1.json",
+    "data/exercises/ex_2.3.2.json",
+    "data/exercises/ex_2.4.json",
     "data/exercises/ex_8.1.json",
     "data/exercises/ex_8.2.json"
   ]

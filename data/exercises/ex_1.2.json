@@ -1,0 +1,9 @@
+{
+  "title": "HTTP",
+  "id": "1.2",
+  "description": "Quizfragen zu Http",
+  "task_source": "data/exercises/data/ex_1.2.html",
+  "solution_type": "text",
+  "thema": "WWW, HTTP, URI",
+  "folien": "2-1"
+}

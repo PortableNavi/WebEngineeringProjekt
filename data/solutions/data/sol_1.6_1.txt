@@ -1,0 +1,31 @@
+1) HTML ist die standard Auszeichnugssprache für Webpages.
+
+2)  Durch Verschachtelung des <ol> Tags:
+    <ol>
+       <li>Ich bin bei Tiefe 1!</li>
+       <ol>
+           <li>Ich bin bei Tiefe 2!</li>
+           <ol>
+               <li>Ich bin bei Tiefe 3!</li>
+           </ol>
+       </ol>
+    </ol>
+
+
+3)  Eine Tabelle wird durch ein <table> Tag definiert. 
+    Innerhalt dieses Tags kann der <caption> Tag benutzt werden,
+    um der Tabelle eine Überschrift zu geben. Der <tr> Tag
+    definiert eine neue Tabellen-Reihe, der <th> Tag definiert
+    eine neue Kopfzelle und der <td> Tag definiert eine normale Zelle.
+
+4)  Keine Großbuschstaben, nur die buchstaben a bis z,
+    die ziffern 0 bis 9 und "-" und "_". Ein Punkte und 
+    Schrägstriche sind für die Formatierung von Dateipfaden
+    und Dateinamen gedacht.
+
+5)  Mit dem <menu> Tag. Jeder Eintrag ist ein <li> Tag.
+
+6)  "src" und "alt". "src" gibt eine URL zu einem Bild an 
+    und "alt" gibt eine Beschreibung/Name das Bildes an,
+    die angezeigt werden kann, falls z.B. Das Bild nicht lädt.
+

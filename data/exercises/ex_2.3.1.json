@@ -1,0 +1,9 @@
+{
+  "title": "CSS Positionierung 1",
+  "id": "2.3.1",
+  "description": "Nachbauen von bestimmten CSS Positioning-Verhalten.",
+  "task_source": "data/exercises/data/ex_2.3.1.html",
+  "solution_type": "code",
+  "thema": "CCS-1",
+  "folien": "3-1"
+}

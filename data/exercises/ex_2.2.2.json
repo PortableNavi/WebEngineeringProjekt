@@ -1,0 +1,9 @@
+{
+  "title": "CSS-Farben",
+  "id": "2.2.2",
+  "description": "Auswertung verschiedemer CSS Farben",
+  "task_source": "data/exercises/data/ex_2.2.2.html",
+  "solution_type": "text",
+  "thema": "CCS-1",
+  "folien": "3-1"
+}

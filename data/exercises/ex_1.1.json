@@ -1,0 +1,9 @@
+{
+  "title": "World Wide Web",
+  "id": "1.1",
+  "description": "Quizfragen zur Entstehung des WWW",
+  "task_source": "data/exercises/data/ex_1.1.html",
+  "solution_type": "text",
+  "thema": "WWW, HTTP, URI",
+  "folien": "2-1"
+}

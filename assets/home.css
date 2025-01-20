@@ -6,6 +6,15 @@
   font-size: 0.9em;
 }
 
+.tr_nr
+{
+  background: var(--col-selected);
+  color: var(--col-text);
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
 .tr_art
 {
   text-transform: capitalize;
@@ -40,7 +49,7 @@
 
   td, th
   {
-    padding: 12px;
+    padding: 10px;
   }
   
   tr
@@ -81,7 +90,7 @@
 }
 
 
-@media (max-width: 710px)
+@media (max-width: 780px)
 {
   table
   {

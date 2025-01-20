@@ -1,0 +1,29 @@
+<html>
+<style>
+  img {
+    width: 100%;
+  }
+
+  #img_box {
+    border: 2px solid black;
+    padding: 5px;
+  }
+
+  #checkbox:not(:checked) ~ #img_box img {
+    visibility: hidden;
+  }
+  
+
+</style>
+
+<body>
+  <h1>Übung 2.2</h1>
+  
+  <input type="checkbox" name="checkbox" id="checkbox" checked>  
+  <label for="checkbox">hide and show via checkbox</label>
+  
+  <div id="img_box">
+    <img src="https://kaul.inf.h-brs.de/ccm/we/ws24/resources/assets/h-brs.jpg" alt="Ein Bild der HBRS">
+  </div>
+</body>
+</html>

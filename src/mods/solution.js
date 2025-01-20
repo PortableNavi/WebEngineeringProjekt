@@ -45,6 +45,12 @@ class Solution
       if (this.$type == "json") 
         data = await data.json(); 
       
+      if (this.type == "text")
+      {
+        data = await data.text();
+        data = data.replaceAll("\n", "<br>");
+      }
+        
       else data = await data.text();
     }
 

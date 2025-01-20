@@ -40,15 +40,24 @@
 .scroller
 {
   background: var(--col-background-highlight);
-  margin-left: 15px;
+  width: max(0, 100%-1em);
+  padding-left: 45px;
+  overflow-y: auto;
   border-radius: 5px;
 }
 
 .solHeader
 {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   margin-bottom: 1em;
+}
+
+
+.preContent
+{
+  /*font-family: "Noto Sans", sans-serif;*/
 }
 
 
@@ -56,8 +65,8 @@
 {
   .scroller
   {
-    overflow-y: scroll;
     margin: 0;
+    padding: 0px;
   }
 
   .codeList

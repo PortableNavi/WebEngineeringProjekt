@@ -1,0 +1,133 @@
+<html>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+  body {
+    text-align: center;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 1.2em;
+    font-style: normal;
+    background: #a9d7d1;
+  }
+
+  .content-box
+  {
+    border: 0px;
+    border-radius: 20px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
+    background: snow;
+  }
+
+  .form_table {
+    display: table;
+    border-spacing: 1em;
+  }
+
+  .form_table_row {
+    display: table-row;
+    text-align: left;
+    align-content: left;
+  }
+
+  .form_table_row > *
+  {
+    display: table-cell;
+    padding-right: 1.5em;
+    max-width: 20em;
+  }
+
+  .form_table_row > label
+  {
+    text-align: right;
+  }
+
+  select {
+    border-radius: 0px;
+    border: black solid 1px;
+    background: #fff;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+  }
+
+  input[type=radio], input[type=checkbox] {
+    accent-color: #24aded;
+  }
+
+</style>
+
+<body>
+  <h1>Survey Form</h1>
+
+  <div class="content-box">
+    <p>Let us know how we can improve freeCodeCamp</p>
+
+  <form class="form_table">
+    <div class="form_table_row">
+      <label for="name">* Name:</label>
+      <input type="text" name="name" id="name" placeholder="Enter Your Name">
+    </div>
+  
+    <div class="form_table_row">
+      <label for="email">* Email:</label>
+      <input type="text" name="email" id="email" placeholder="Enter Your Email">
+    </div>
+
+    <div class="form_table_row">
+      <label for="age">* Age:</label>
+      <input type="text" name="age" id="age" placeholder="Enter Your Age">
+    </div>
+
+    <div class="form_table_row">
+      <label for="role">Which option describes your current role?</label>
+      <select name="role" id="role">
+        <option selected>Student</option>
+        <option>Teacher</option>
+        <option>Hobby</option>
+      </select>
+    </div>
+
+    <div class="form_table_row">
+      <label>How likely is that you would recommend freeCodeCamp to a friend?</label>
+      
+      <div>
+        <input type="radio" name="recommend" id="recommend_yes">
+        <label for="recommend_yes">Definitly</label>
+        <br>
+        <input type="radio" name="recommend" id="recommend_mby">
+        <label for="recommend_mby">Maybe</label>
+        <br>
+        <input type="radio" name="recommend" id="recommend_no" checked>
+        <label for="recommend_mby">Not Sure</label>
+      </div>
+    </div>
+
+    <div class="form_table_row">
+      <label for="likes">What do you like most in FCC?</label>
+      <select name="likes" id="likes">
+        <option disabled selected>Select an option</option>
+        <option>The Examples</option>
+        <option>The Explainations</option>
+      </select>
+    </div>
+
+    <div class="form_table_row">
+      <label>Things that should be improved in the future (Check all that apply):</label>
+      <div>
+        <input type="checkbox" id="check_fe">
+        <label for="check_fe">Front-end Projects</label>
+        <br>
+        <input type="checkbox" id="check_be">
+        <label for="check_be">Back-end Projects</label>
+        <br>
+        <input type="checkbox" id="check_dv">
+        <label for="check_dv">Data Visualization</label>
+      </div>
+    </div>
+  </form>
+  </div>
+</body>
+</html>

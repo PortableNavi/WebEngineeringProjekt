@@ -1,0 +1,9 @@
+{
+  "title": "CSS-Selektoren",
+  "id": "2.2.1",
+  "description": "Auswertung verschiedemer CSS Selektoren",
+  "task_source": "data/exercises/data/ex_2.2.1.html",
+  "solution_type": "text",
+  "thema": "CCS-1",
+  "folien": "3-1"
+}

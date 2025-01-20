@@ -1,0 +1,10 @@
+1) OK, Die Anfrage war erfolgreich.
+
+2) Die URL der Anfrage wurde permanent geändert. Die neue URL wird in der Antwort mit angegeben.
+
+3) BAD REQUEST, Der Server kann die Anfrage nicht verarbeiten wegen einer falsch formatierten/formulierten Anfrage.
+
+4) FORBIDDEN, Der Client hat keinen Zugriff auf diese Resource.
+
+
+5) ...

@@ -33,6 +33,7 @@ async function solution()
 
   if (solution.type == "code") display_code_solution(solution);
   if (solution.type == "text") display_text_solution(solution);
+  if (solution.type == "pre") display_pre_solution(solution);
 
 }
 
@@ -60,9 +61,19 @@ function display_text_solution(solution)
 {
   const text_template = document.querySelector("#textSolution");
   const t = text_template.content.cloneNode(true);
-  t.querySelector(".textContent").textContent = solution.data;
+  t.querySelector(".textContent").innerHTML = solution.data;
   document.querySelector(".solContent").appendChild(t);
 }
+
+
+function display_pre_solution(solution)
+{
+  const text_template = document.querySelector("#preSolution");
+  const t = text_template.content.cloneNode(true);
+  t.querySelector(".preContent").innerText = solution.data;
+  document.querySelector(".solContent").appendChild(t);
+}
+
 
 function view_raw()
 {

@@ -1,0 +1,9 @@
+{
+  "title": "HTML/CSS Wireframe",
+  "id": "2.4",
+  "description": "Nachbauen eines wireframes",
+  "task_source": "data/exercises/data/ex_2.4.html",
+  "solution_type": "code",
+  "thema": "CCS-1",
+  "folien": "3-1"
+}

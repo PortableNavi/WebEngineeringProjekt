@@ -1,0 +1,59 @@
+@import url("colors.css");
+
+
+.cardGrid
+{
+  ul
+  {
+    margin-top: 1em;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    list-style: none;
+  }
+
+  li
+  {
+  }
+
+  li > a
+  {
+    color: var(--col-text);
+  }
+
+  p
+  {
+    color: var(--col-text-dim);
+    text-align: justify;
+  }
+
+  .cardHeader
+  {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1em; 
+  }
+
+  .card
+  {
+    display: block;
+    padding: 20px;
+  }
+
+  .card:hover
+  {
+    background: var(--col-background-highlight);
+  }
+  
+  @media (max-width: 790px)
+  {
+    ul
+    {
+      display: flex;
+      flex-direction: column;
+    } 
+  }
+}
+
+
